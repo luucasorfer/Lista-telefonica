@@ -1,0 +1,52 @@
+[
+  {
+    "name": "João Silva",
+    "phone": "(11) 9999-1111",
+    "location": "São Paulo"
+  },
+  {
+    "name": "Maria Souza",
+    "phone": "(21) 9999-2222",
+    "location": "Rio de Janeiro"
+  },
+  {
+    "name": "Pedro Santos",
+    "phone": "(31) 9999-3333",
+    "location": "Belo Horizonte"
+  },
+  {
+    "name": "Mariana Oliveira",
+    "phone": "(41) 9999-4444",
+    "location": "Curitiba"
+  },
+  {
+    "name": "Lucas Rodrigues",
+    "phone": "(51) 9999-5555",
+    "location": "Porto Alegre"
+  },
+  {
+    "name": "Ana Paula Costa",
+    "phone": "(71) 9999-6666",
+    "location": "Salvador"
+  },
+  {
+    "name": "Rafael Fernandes",
+    "phone": "(81) 9999-7777",
+    "location": "Recife"
+  },
+  {
+    "name": "Juliana Mendes",
+    "phone": "(84) 9999-8888",
+    "location": "Natal"
+  },
+  {
+    "name": "Fernando Xavier",
+    "phone": "(91) 9999-9999",
+    "location": "Belém"
+  },
+  {
+    "name": "Carla Santos",
+    "phone": "(98) 9999-0000",
+    "location": "São Luís"
+  }
+]
