@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista Telefônica</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="print.css" media="print">
   </head>
   <body>
-    <div class="container">
+    <div id="container">
       <h1>Lista Telefônica</h1>
-      <div class="search">
-        <input type="text" id="search-input" placeholder="Pesquisar...">
-        <i class="fa fa-search"></i>
+      <input type="text" class="search-input" id="search" placeholder="Digite aqui para buscar" />
+      <div class="filterList" id="filter">
+        <label>
+          <input type="checkbox" name="filter-local" value="Alfenas" checked />
+          Alfenas
+        </label>
+
+        <label>
+          <input type="checkbox" name="filter-local" value="São Paulo" />
+          São Paulo
+        </label>
+
+        <label>
+          <input type="checkbox" name="filter-local" value="Americana" />
+          Americana
+        </label>
       </div>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Telefone</th>
-              <th>Local</th>
-            </tr>
-          </thead>
-          <tbody id="phone-list">
-          </tbody>
-        </table>
-      </div>
+      <ul id="results"></ul>
+			<button id="print-button" onclick="window.print()">Imprimir</button>
+
+      <script src="script.js"></script>
     </div>
-    <script src="app.js"></script>
   </body>
 </html>

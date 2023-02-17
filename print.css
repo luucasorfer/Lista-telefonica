@@ -1,0 +1,40 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #container {
+    padding: 0px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  #results {
+    position: absolute;
+    max-width: 800px;
+    top: 70px;
+  }
+
+  #results li {
+    width: 112px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+
+    margin-bottom: 5px;
+  }
+
+  h1,
+  strong,
+  li,
+  p,
+  #print-button {
+    visibility: visible;
+  }
+
+  #print-button {
+    display: none;
+  }
+}
