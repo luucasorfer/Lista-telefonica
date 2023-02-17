@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista Telefônica</title>
     <link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="print.css" media="print">
-  </head>
   <body>
     <div id="container">
       <h1>Lista Telefônica</h1>
-      <input type="text" class="search-input" id="search" placeholder="Digite aqui para buscar" />
+      <input
+        type="text"
+        class="search-input"
+        id="search"
+        placeholder="Digite aqui para buscar"
+      />
       <div class="filterList" id="filter">
         <label>
           <input type="checkbox" name="filter-local" value="Alfenas" checked />
@@ -23,12 +26,12 @@
         </label>
 
         <label>
-          <input type="checkbox" name="filter-local" value="Americana" />
-          Americana
+          <input type="checkbox" name="filter-local" value="Blumenau" />
+          Blumenau
         </label>
       </div>
       <ul id="results"></ul>
-			<button id="print-button" onclick="window.print()">Imprimir</button>
+      <button id="print-button" onclick="window.print()">Imprimir</button>
 
       <script src="script.js"></script>
     </div>
