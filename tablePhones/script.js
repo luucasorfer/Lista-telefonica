@@ -9,30 +9,32 @@ xhr.onload = function () {
     // seleciona os elementos do DOM
     var searchInput = document.getElementById("search");
     var filterCheckboxes = document.getElementsByName("filter-local");
-    var resultsList = document.getElementById("results");
+    var resultsTable = document.getElementById("results");
 
     // adiciona os listeners de busca e filtro
     searchInput.addEventListener("input", function () {
-      updateList(data);
+      updateTable(data);
     });
     for (var i = 0; i < filterCheckboxes.length; i++) {
       filterCheckboxes[i].addEventListener("change", function () {
-        updateList(data);
+        updateTable(data);
       });
     }
 
-    // atualiza a lista com os dados iniciais
-    updateList(data);
+    // atualiza a tabela com os dados iniciais
+    updateTable(data);
   }
 };
 xhr.send();
 
-// função que atualiza a lista de resultados
-function updateList(data) {
+// função que atualiza a tabela de resultados
+function updateTable(data) {
   // seleciona os elementos do DOM
   var searchInput = document.getElementById("search");
   var filterCheckboxes = document.getElementsByName("filter-local");
-  var resultsList = document.getElementById("results");
+  var resultsTable = document.getElementById("results");
+  // seleciona o elemento do botão de impressão
+  var printButton = document.getElementById("print-button");
 
   // obtém o valor do campo de busca
   var searchTerm = searchInput.value.trim().toLowerCase();
@@ -59,35 +61,39 @@ function updateList(data) {
     return true;
   });
 
-  // atualiza a lista de resultados
-  resultsList.innerHTML = "";
-  for (var i = 0; i < filteredData.length; i++) {
-    var item = filteredData[i];
-    var li = document.createElement("li");
-    li.innerHTML =
-      "<strong>" + item.nome + "</strong>" +
-      "<p>" + item.telefone + "</p>" 
-      /*+ " (" + item.local + ")"*/;
-    resultsList.appendChild(li);
+  // limpa a tabela de resultados
+  resultsTable.innerHTML = "";
+
+  // adiciona os dados filtrados à tabela
+  if (filteredData.length > 0) {
+    for (var i = 0; i < filteredData.length; i++) {
+      var item = filteredData[i];
+      var row = document.createElement("tr");
+      row.innerHTML =
+        "<td>" + "<strong>" + item.nome + "</strong>" +
+        "<p>" + item.telefone + "</p>" + "</td>"
+      resultsTable.appendChild(row);
+    }
   }
 
   // exibe mensagem de "nenhum resultado encontrado" se a lista estiver vazia
   if (filteredData.length === 0) {
-    var li = document.createElement("li");
-    li.innerHTML = "Nenhum resultado encontrado";
-    resultsList.appendChild(li);
+    var row = document.createElement("tr");
+    row.innerHTML = "Nenhum resultado encontrado";
+    resultsTable.appendChild(row);
+
+    // esconde o botão de impressão
+    printButton.style.display = "none";
+  } else {
+    // exibe o botão de impressão
+    printButton.style.display = "inline-block";
   }
-}
 
-// exibe o botão de impressão se houver resultados na tabela
-if (filteredData.length > 0) {
-  printButton.style.display = "block";
-} else {
-  printButton.style.display = "none";
-}
+  
+  // verifica se o último elemento filho da lista está vazio e remove a borda inferior
+  const lastResult = resultsTable.lastElementChild;
+  if (lastResult.textContent.trim() === "") {
+    lastResult.style.borderBottom = "none";
+  }
 
-// verifica se o último elemento filho da lista está vazio e remove a borda inferior
-const lastResult = resultsTable.lastElementChild;
-if (lastResult.textContent.trim() === "") {
-  lastResult.style.borderBottom = "none";
 }

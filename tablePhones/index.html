@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista Telefônica</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="print.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista Telefônica</h1>
+      <input
+        type="text"
+        class="search-input"
+        id="search"
+        placeholder="Digite aqui para buscar"
+      />
+      <div class="filterList" id="filter">
+        <label>
+          <input type="checkbox" name="filter-local" value="Alfenas" checked />
+          Alfenas
+        </label>
+
+        <label>
+          <input type="checkbox" name="filter-local" value="São Paulo" />
+          São Paulo
+        </label>
+
+        <label>
+          <input type="checkbox" name="filter-local" value="Blumenau" />
+          Blumenau
+        </label>
+      </div>
+      <table id="results">
+        <tbody></tbody>
+      </table>
+      <button id="print-button" onclick="window.print()">Imprimir</button>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+@media print {
+  * {
+    visibility: hidden;
+  }
+
+  .container {
+    padding: 0px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  #results {
+    position: absolute;
+    top: 90px;
+  }
+
+  td {
+    width: 110px;
+    padding: 10px 5px 0;
+    font-size: 12px;
+
+    margin-top: 5px;
+  }
+
+  h1,
+  strong,
+  #results td,
+  p {
+    visibility: visible;
+  }
+  
+  #print-button {
+    display: none;
+  }
+}

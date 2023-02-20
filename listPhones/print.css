@@ -11,26 +11,29 @@
     margin: 0;
   }
 
+  h1::after {
+    position: relative;
+    bottom: 20px;
+  }
   #results {
     position: absolute;
-    max-width: 800px;
+    max-width: 760px;
     top: 70px;
   }
 
   #results li {
-    width: 112px;
-    padding: 5px;
+    width: 110px;
+    padding: 10px 5px 0;
     border-bottom: 1px solid #ddd;
     font-size: 12px;
 
-    margin-bottom: 5px;
+    margin-top: 5px;
   }
 
   h1,
   strong,
   li,
-  p,
-  #print-button {
+  p {
     visibility: visible;
   }
 

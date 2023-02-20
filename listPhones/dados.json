@@ -3,7 +3,6 @@
   { "telefone": 2001, "nome": "Fabio Blu", "local": "Blumenau" },
   { "telefone": 2002, "nome": "Amarildo Blu", "local": "Blumenau" },
   { "telefone": 2003, "nome": "Emerson Blu", "local": "Blumenau" },
-  { "telefone": "", "nome": "", "local": "Blumenau" },
 
   { "telefone": 4801, "nome": "Alberto San", "local": "São Paulo" },
   { "telefone": 4803, "nome": "Gerson R", "local": "São Paulo" },
@@ -60,7 +59,6 @@
   { "telefone": 4895, "nome": "Fabio Marqu", "local": "São Paulo" },
   { "telefone": 4896, "nome": "Sala Reuniã", "local": "São Paulo" },
   { "telefone": 4897, "nome": "Sala Reuniã", "local": "São Paulo" },
-  { "telefone": "", "nome": "", "local": "São Paulo" },
 
   { "telefone": 5000, "nome": "Portaria", "local": "Alfenas" },
   { "telefone": 5002, "nome": "Rodrigo Oliveira", "local": "Alfenas" },
@@ -169,6 +167,5 @@
   { "telefone": 5153, "nome": "Jessyka Alves", "local": "Alfenas" },
   { "telefone": 5174, "nome": "Monitor treinam", "local": "Alfenas" },
   { "telefone": 5175, "nome": "Fernanda Pereira", "local": "Alfenas" },
-  { "telefone": 5311, "nome": "Balança 11", "local": "Alfenas" },
-  { "telefone": "", "nome": "", "local": "Alfenas" }
+  { "telefone": 5311, "nome": "Balança 11", "local": "Alfenas" }
  ]

@@ -11,12 +11,15 @@ fetch('phones.json')
     // Itera sobre todos os números de telefone e cria uma nova linha na tabela para cada um
     phones.forEach(phone => {
       const row = document.createElement('tr');
-      const nameCell = document.createElement('td');
-      const phoneCell = document.createElement('td');
-      nameCell.textContent = phone.name;
-      phoneCell.textContent = phone.phone;
+      const nameCell = document.createElement('strong');
+      const phoneCell = document.createElement('p');
+
+      nameCell.textContent = phone.nome;
+      phoneCell.textContent = phone.telefone;
+
       row.appendChild(nameCell);
       row.appendChild(phoneCell);
+
       phoneList.appendChild(row);
     });
     
@@ -36,7 +39,7 @@ fetch('phones.json')
         // Itera sobre todas as células da linha atual
         Array.from(cells).forEach(function(cell) {
           // Converte o valor da célula para minúsculas e verifica se ele contém a pesquisa
-          if (cell.textContent.toLowerCase().includes(searchTerm)) {
+          if (row.textContent.toLowerCase().includes(searchTerm)) {
             hasMatch = true;
           }
         });
