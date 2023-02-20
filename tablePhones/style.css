@@ -20,7 +20,7 @@ h1 {
 }
 
 h1::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 100%;
   height: 2px;
@@ -37,9 +37,10 @@ h1::after {
   box-shadow: 0px 0px 5px #aaa;
 }
 
-.search-input:focus{
+.search-input:focus {
+  padding: 9px;
   outline: none;
-  border: #666 solid 1px;
+  border: 1px solid #666;
 }
 
 .filterList {
@@ -47,7 +48,7 @@ h1::after {
   align-items: center;
   justify-content: center;
   gap: 22px;
-  
+
   padding: 15px;
 }
 
@@ -60,15 +61,10 @@ h1::after {
   flex-wrap: wrap;
   justify-content: space-evenly;
 
-
   border-collapse: collapse;
   width: 100%;
   text-align: left;
   margin: 0 auto;
-}
-
-tr {  
-  border-bottom: 1px solid;
 }
 
 td {
