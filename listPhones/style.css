@@ -40,7 +40,7 @@ h1::after {
 .search-input:focus {
   padding: 9px;
   outline: none;
-  border: #666 solid 1px;
+  border: 1px solid #666;
 }
 
 div .filterList {
@@ -52,7 +52,7 @@ div .filterList {
   padding: 15px;
 }
 
-input[type="checkbox"] {
+.filterList input {
   margin-right: 5px;
 }
 
@@ -62,12 +62,17 @@ input[type="checkbox"] {
   justify-content: space-evenly;
 
   list-style: none;
+  width: 100%;
 }
 
 #results li {
-  width: 165px;
-  padding: 5px;
+  width: 175px;
+  padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+#results li.last-sp:nth-last-child(-n + 1) {
+  margin-right: 184px;
 }
 
 p {

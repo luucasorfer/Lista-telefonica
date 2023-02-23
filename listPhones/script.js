@@ -67,9 +67,13 @@ function updateList(data) {
     var item = filteredData[i];
     var li = document.createElement("li");
     li.innerHTML =
-      "<strong>" + item.nome + "</strong>" +
-      "<p>" + item.telefone + "</p>";
+      "<strong>" + item.nome + "</strong>" + "<p>" + item.telefone + "</p>";
     resultsList.appendChild(li);
+
+    // adiciona classe para último item da lista se for de São Paulo
+    if (i === filteredData.length - 1 && item.local === "São Paulo") {
+      li.classList.add("last-sp");
+    }
   }
 
   // exibe mensagem de "nenhum resultado encontrado" se a lista estiver vazia
@@ -85,7 +89,6 @@ function updateList(data) {
     printButton.style.display = "inline-block";
   }
 
-  
   // verifica se o último elemento filho da lista está vazio e remove a borda inferior
   const lastResult = resultsList.lastElementChild;
   if (lastResult.textContent.trim() === "") {
