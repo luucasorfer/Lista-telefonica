@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Telefônica</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./print.css">
+  <body>
+    <div id="container">
+      <h1>Lista Telefônica</h1>
+      <input
+        type="text"
+        class="search-input"
+        id="search"
+        placeholder="Digite aqui para buscar"
+      />
+      <div class="filterList" id="filter">
+        <label>
+          <input type="radio" name="filter-local" value="Alfenas" checked />
+          Alfenas
+        </label>
+
+        <label>
+          <input type="radio" name="filter-local" value="São Paulo" />
+          São Paulo
+        </label>
+
+        <label>
+          <input type="radio" name="filter-local" value="Blumenau" />
+          Blumenau
+        </label>
+      </div>
+      <ul id="results"></ul>
+      <button id="print-button" onclick="window.print()">Imprimir</button>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

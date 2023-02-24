@@ -1,0 +1,48 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #container {
+    padding: 0px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h1::after {
+    position: relative;
+    bottom: 20px;
+  }
+  #results {
+    position: absolute;
+    max-width: 760px;
+    top: 70px;
+  }
+
+  #results li {
+    width: 110px;
+    padding: 10px 5px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+
+    margin-top: 5px;
+  }
+  #results li.last-sp:nth-last-child(-n + 1) {
+    position: relative;
+    bottom: 4px;
+    right: 204px;
+  }
+
+  h1,
+  strong,
+  li,
+  p {
+    visibility: visible;
+  }
+
+  #print-button {
+    display: none;
+  }
+}
