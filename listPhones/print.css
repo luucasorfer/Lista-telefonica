@@ -15,6 +15,7 @@
     position: relative;
     bottom: 20px;
   }
+
   #results {
     position: absolute;
     max-width: 760px;
@@ -29,6 +30,7 @@
 
     margin-top: 5px;
   }
+  
   #results li.last-sp:nth-last-child(-n + 1) {
     position: relative;
     bottom: 4px;
